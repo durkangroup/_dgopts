@@ -16,3 +16,6 @@ Global options and settings for our client sites.
 
 #### 0.1
 * First version.
+
+#### 0.2
+* Added Updater.

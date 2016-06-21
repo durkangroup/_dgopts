@@ -13,6 +13,39 @@ License: GPL2
 if (!defined('WPINC'))
   die();
 
+// updater
+add_action( 'init', 'dgopts_github_plugin_updater_init' );
+function dgopts_github_plugin_updater_init() {
+
+  include_once 'inc/updater.php';
+
+  define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+  if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+    $username = 'durkangroup';
+    $repo = '_dgopts';
+
+    $config = array(
+      'slug' => plugin_basename( __FILE__ ),
+      'proper_folder_name' => 'github-updater',
+      'api_url' => 'https://api.github.com/repos/'.$username.'/'.$repo.'',
+      'raw_url' => 'https://raw.github.com/'.$username.'/'.$repo.'/master',
+      'github_url' => 'https://github.com/'.$username.'/'.$repo.'',
+      'zip_url' => 'https://github.com/'.$username.'/'.$repo.'/archive/master.zip',
+      'sslverify' => true,
+      'requires' => '4.0',
+      'tested' => '4.5.2',
+      'readme' => 'README.md',
+      'access_token' => '',
+    );
+
+    new WP_GitHub_Updater( $config );
+
+  }
+
+}
+
 
 /* Standard Cleanups */
 
@@ -135,4 +168,3 @@ function _dgopts_options() {
 
 }
 
-?>
