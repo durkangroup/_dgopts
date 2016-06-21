@@ -13,7 +13,7 @@ License: GPL2
 if (!defined('WPINC'))
   die();
 
-// updater
+// github updater
 add_action( 'init', 'dgopts_github_plugin_updater_init' );
 function dgopts_github_plugin_updater_init() {
 
