@@ -28,7 +28,7 @@ function dgopts_github_plugin_updater_init() {
 
     $config = array(
       'slug' => plugin_basename( __FILE__ ),
-      'proper_folder_name' => 'github-updater',
+      'proper_folder_name' => $repo,
       'api_url' => 'https://api.github.com/repos/'.$username.'/'.$repo.'',
       'raw_url' => 'https://raw.github.com/'.$username.'/'.$repo.'/master',
       'github_url' => 'https://github.com/'.$username.'/'.$repo.'',
