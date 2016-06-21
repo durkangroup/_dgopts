@@ -4,7 +4,7 @@
 Plugin Name: DG Options
 Plugin URI: https://durkangroup.com
 Description: Options for sites.
-Version: 0.2
+Version: 0.2.1
 Author: Durkan Group
 Author URI: https://durkangroup.com
 License: GPL2
