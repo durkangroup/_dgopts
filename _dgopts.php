@@ -4,7 +4,7 @@
 Plugin Name: DG Options
 Plugin URI: https://durkangroup.com
 Description: Options for sites.
-Version: 0.2.1
+Version: 0.2.2
 Author: Durkan Group
 Author URI: https://durkangroup.com
 License: GPL2
@@ -28,7 +28,7 @@ function dgopts_github_plugin_updater_init() {
 
     $config = array(
       'slug' => plugin_basename( __FILE__ ),
-      'proper_folder_name' => $repo,
+      'proper_folder_name' => $repo.'-master',
       'api_url' => 'https://api.github.com/repos/'.$username.'/'.$repo.'',
       'raw_url' => 'https://raw.github.com/'.$username.'/'.$repo.'/master',
       'github_url' => 'https://github.com/'.$username.'/'.$repo.'',
